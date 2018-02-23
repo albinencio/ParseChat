@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       configuration.applicationId = "CodePath-Parse"
       configuration.server = "https://parsechatcodepath.herokuapp.com/parse"
     }))
+    
+    if let currentUser = PFUser.current() {
+      print("Welcome back \(currentUser.username!) 🐸")
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let navigationController = storyboard.instantiateViewController(withIdentifier: "NavigationController")
+      window?.rootViewController = navigationController
+    }
     return true
   }
 
