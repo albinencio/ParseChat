@@ -20,6 +20,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     super.viewDidLoad()
     
     tableView.delegate = self
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 50
     
     _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.refreshOnTimer), userInfo: nil, repeats: true)
   }
@@ -44,18 +46,30 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return messages.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
+    let message = messages[indexPath.row]
+    let text = message["text"] as! String
+    cell.messageLabel.text = text
     return cell
   }
   
   @objc func refreshOnTimer() {
     let query = PFQuery(className: "Message")
     query.addDescendingOrder("createdAt")
-    let response = query.findObjectsInBackground()
+    query.findObjectsInBackground { (objects, error) in
+      if error == nil {
+        if let objects = objects {
+          self.messages = objects
+          self.tableView.reloadData()
+        }
+      } else {
+        print(error?.localizedDescription ?? "Error instance was nil")
+      }
+    }
   }
   
 }
