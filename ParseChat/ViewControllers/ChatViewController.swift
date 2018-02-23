@@ -20,11 +20,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     super.viewDidLoad()
     
     tableView.delegate = self
+    tableView.dataSource = self
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 50
-    tableView.separatorStyle = .none
-    tableView.reloadData()
-    
+    tableView.separatorInset = .zero
     _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.refreshOnTimer), userInfo: nil, repeats: true)
   }
   
@@ -66,14 +65,12 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
   }
   
   @objc func refreshOnTimer() {
-    print("IN HERE!!!!!!!!!!!!!!!");
     let query = PFQuery(className: "Message")
     query.includeKey("user")
     query.addDescendingOrder("createdAt")
     query.findObjectsInBackground { (objects, error) in
       if error == nil {
         if let objects = objects {
-          print("Objects instantiated")
           self.messages = objects
         }
       } else {

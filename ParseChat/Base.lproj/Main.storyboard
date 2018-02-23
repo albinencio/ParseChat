@@ -98,31 +98,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="68" id="wez-UH-hCB" customClass="ChatCell" customModule="ParseChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="69" id="wez-UH-hCB" customClass="ChatCell" customModule="ParseChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wez-UH-hCB" id="Fyp-dz-yfF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68l-VJ-Kdi">
-                                                    <rect key="frame" x="8" y="36.5" width="359" height="23"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, my name is Alberto." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teL-7r-g48">
-                                                            <rect key="frame" x="4" y="1.5" width="351" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstItem="teL-7r-g48" firstAttribute="centerY" secondItem="68l-VJ-Kdi" secondAttribute="centerY" id="Klp-6H-x2l"/>
-                                                        <constraint firstItem="teL-7r-g48" firstAttribute="leading" secondItem="68l-VJ-Kdi" secondAttribute="leading" constant="4" id="Vhg-nz-CCX"/>
-                                                        <constraint firstAttribute="trailing" secondItem="teL-7r-g48" secondAttribute="trailing" constant="4" id="t74-HK-V8Q"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ol9-hI-Neb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, my name is Alberto." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teL-7r-g48">
+                                                    <rect key="frame" x="8" y="36.5" width="359" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ol9-hI-Neb">
                                                     <rect key="frame" x="8" y="8" width="359" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -130,17 +118,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ol9-hI-Neb" firstAttribute="top" secondItem="Fyp-dz-yfF" secondAttribute="top" constant="8" id="5Gs-dU-WHE"/>
-                                                <constraint firstItem="ol9-hI-Neb" firstAttribute="leading" secondItem="Fyp-dz-yfF" secondAttribute="leading" constant="8" id="By6-hT-OOx"/>
-                                                <constraint firstAttribute="bottom" secondItem="68l-VJ-Kdi" secondAttribute="bottom" constant="8" id="HV5-Jd-IHj"/>
-                                                <constraint firstAttribute="trailing" secondItem="68l-VJ-Kdi" secondAttribute="trailing" constant="8" id="TjK-9z-bHN"/>
-                                                <constraint firstAttribute="trailing" secondItem="ol9-hI-Neb" secondAttribute="trailing" constant="8" id="ZAq-nK-KYS"/>
-                                                <constraint firstItem="68l-VJ-Kdi" firstAttribute="top" secondItem="ol9-hI-Neb" secondAttribute="bottom" constant="8" id="hbO-JS-92O"/>
-                                                <constraint firstItem="68l-VJ-Kdi" firstAttribute="leading" secondItem="Fyp-dz-yfF" secondAttribute="leading" constant="8" id="osR-GU-7Ys"/>
+                                                <constraint firstAttribute="trailing" secondItem="teL-7r-g48" secondAttribute="trailing" constant="8" id="MuL-3T-im8"/>
+                                                <constraint firstItem="ol9-hI-Neb" firstAttribute="top" secondItem="Fyp-dz-yfF" secondAttribute="top" constant="8" id="PHA-rM-c4x"/>
+                                                <constraint firstItem="teL-7r-g48" firstAttribute="leading" secondItem="Fyp-dz-yfF" secondAttribute="leading" constant="8" id="Ubb-ep-rYk"/>
+                                                <constraint firstAttribute="bottom" secondItem="teL-7r-g48" secondAttribute="bottom" constant="8" id="eYW-Pt-MFX"/>
+                                                <constraint firstItem="ol9-hI-Neb" firstAttribute="leading" secondItem="Fyp-dz-yfF" secondAttribute="leading" constant="8" id="gWl-Ul-1d3"/>
+                                                <constraint firstAttribute="trailing" secondItem="ol9-hI-Neb" secondAttribute="trailing" constant="8" id="l2M-Ec-OXD"/>
+                                                <constraint firstItem="teL-7r-g48" firstAttribute="top" secondItem="ol9-hI-Neb" secondAttribute="bottom" constant="8" id="wSh-cU-qhh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bubbleView" destination="68l-VJ-Kdi" id="xUy-mw-7vy"/>
                                             <outlet property="messageLabel" destination="teL-7r-g48" id="r0d-Dp-0jZ"/>
                                             <outlet property="userLabel" destination="ol9-hI-Neb" id="gAz-Vh-lxR"/>
                                         </connections>
