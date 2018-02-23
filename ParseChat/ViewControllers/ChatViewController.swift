@@ -75,12 +75,12 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let objects = objects {
           print("Objects instantiated")
           self.messages = objects
-          self.tableView.reloadData()
         }
       } else {
         print(error?.localizedDescription ?? "Error instance was nil")
       }
     }
+    self.tableView.reloadData()
   }
   
 }
